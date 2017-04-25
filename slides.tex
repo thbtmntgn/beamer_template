@@ -1,0 +1,161 @@
+
+\documentclass[8pt]{beamer}
+
+%================================================
+%		LOADING PACKAGES
+%================================================
+
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{etoolbox}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{array}
+\usepackage[absolute, overlay]{textpos}
+\usepackage{booktabs}
+\usepackage{datetime}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{wasysym}
+\usepackage[normalem]{ulem}
+\usepackage[style=authortitle, backend=bibtex]{biblatex}
+
+% \bibliography{}
+
+\pgfplotsset{compat=1.13}
+
+\useunder{\uline}{\ul}{}
+
+\newcommand{\tabitem}{%
+  \usebeamertemplate{itemize item}\hspace*{\labelsep}}
+
+%================================================
+%		NEW ENVIRONMENTS
+%================================================
+
+\newenvironment{ligneHoriz}{\hrule\begin{center}}{\end{center}\hrule}
+
+%================================================
+%		BOOKMARKS PDF
+%================================================
+
+\makeatletter
+\apptocmd{\beamer@@frametitle}{\only<1>{\bookmark[page=\the\c@page, level=3]{#1}}}%
+{\message{** patching of \string\beamer@@frametitle succeeded **}}%
+{\message{** patching of \string\beamer@@frametitle failed **}}%
+\makeatother
+
+%================================================
+%		THEMES
+%================================================
+
+\usetheme{/sthlm}
+
+%================================================
+%		START DOCUMENT
+%================================================
+
+\begin{document}
+
+%================================================
+%	   DIAPO DEBUT
+%================================================
+
+\begin{frame}{}
+
+	\thispagestyle{empty}
+
+	\begin{center}
+		\includegraphics[height=1cm]{beamertheme/logo.png}
+		\hfill
+		\includegraphics[height=1cm]{beamertheme/logo.png}
+		\hfill
+		\includegraphics[height=1cm]{beamertheme/logo.png}
+		\hfill
+	\end{center}
+
+	\vspace{0.5cm}
+
+	\begin{center}
+		\huge{
+			\begin{ligneHoriz}
+			\vspace{0.25cm}
+			Title
+			\vspace{0.25cm}
+			\end{ligneHoriz}
+		}
+	\end{center}
+
+	\vfill
+
+	\begin{center}
+		\Large{Reason}\\
+		\large{Firstname Lastname}\\
+		\small{Information}\\
+		\large{Date}
+	\end{center}
+
+	\vfill
+
+	\begin{center}
+		\large{Where}
+	\end{center}
+
+	\vfill
+
+	\begin{center}
+		\includegraphics[height=1cm]{beamertheme/logo.png}
+		\hfill
+		\includegraphics[height=1cm]{beamertheme/logo.png}
+		\hfill
+		\includegraphics[height=1cm]{beamertheme/logo.png}
+	\end{center}
+
+\end{frame}
+
+%================================================
+%	   DIAPO 1
+%================================================
+
+\begin{frame}{Slide 1}
+
+\end{frame}
+
+%================================================
+%	   DIAPO 2
+%================================================
+
+\begin{frame}{Slide 2}
+
+\end{frame}
+
+%================================================
+%================================================
+
+\section{\Huge{END}}
+
+%================================================
+%================================================
+
+%================================================
+% DIAPO
+%================================================
+
+\begin{frame}{}
+
+	\thispagestyle{empty}
+
+	\begin{figure}
+		\includegraphics[width=6cm]{beamertheme/logo.png}
+	\end{figure}
+
+\end{frame}
+
+%================================================
+%		END DOCUMENT
+%================================================
+
+\end{document}
